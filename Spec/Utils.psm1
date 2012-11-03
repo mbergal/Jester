@@ -1,4 +1,0 @@
-function ff()
-    {
-    Write-Host '!!!!!!!!!!'
-    }

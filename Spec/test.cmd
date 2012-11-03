@@ -1,0 +1,1 @@
+powershell .\Spec.ps1;Invoke-Jester

@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-Import-Module Jester 
+Import-Module (Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) ..\Jester.psd1 )
 
 Describe "Invocation" {
     Before {
@@ -26,7 +26,6 @@ Describe "Invocation" {
 
 Describe "Test Fixtures" {
     Before {
-        Import-Module .\Utils.psm1
         function Invoke-Test( $path, $expectedOutput )
             {
             (,($result = & powershell.exe $path)) | ShouldBe $expectedOutput
