@@ -5,7 +5,6 @@
 
 $ErrorActionPreference = "Stop"
 
-@
 function Resolve-RelativePath( $path, $invocation )
     {
     $driveName = ''
