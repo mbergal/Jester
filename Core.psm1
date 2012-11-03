@@ -9,11 +9,14 @@ Import-Module (Resolve-RelativePath Model.psm1)
 
 $ErrorActionPreference = "Stop"
 
-function Invoke-Jester( [Parameter(ParameterSetName="Show")][switch] $Show, 
-                        [Parameter(ParameterSetName="Test")][string] $Test = "*",
-                        [Parameter(ParameterSetName="Test")][switch] $NoExecute = $false,
-                        [Parameter(ParameterSetName="Test")][switch] $NoOutline = $false )
+function Invoke-Jester
     {
+    [CmdletBinding(DefaultParameterSetName="Test")]
+    param( [Parameter(ParameterSetName="Show")][switch] $Show, 
+           [Parameter(ParameterSetName="Test")][string] $Test = "*",
+           [Parameter(ParameterSetName="Test")][switch] $NoExecute = $false,
+           [Parameter(ParameterSetName="Test")][switch] $NoOutline = $false )
+
     if ( (Get-RootSuite).Children.Length -gt 0 )
         {
         if ( $Show ) 
