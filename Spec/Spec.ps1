@@ -33,6 +33,7 @@ Describe "Test Fixtures" {
         }
     Describe "When before is specified" {
         It "it is executed before test" {
+            Invoke-Test '.\test-specs\before.ps1'  @( "Before", "It" )
             }
         }
     Describe "When before is specified in multiple nested suites" -Id "mbe" {
