@@ -85,3 +85,4 @@ Export-ModuleMember Invoke-Jester
 Export-ModuleMember Describe
 Export-ModuleMember It
 Export-ModuleMember ShouldBe
+Export-ModuleMember ShouldBeTrue

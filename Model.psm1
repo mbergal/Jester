@@ -155,4 +155,4 @@ Export-ModuleMember Add-Test
 Export-ModuleMember Get-RootSuite
 Export-ModuleMember Get-Level
 Export-ModuleMember Get-SuiteChain
-
+Export-ModuleMember Get-SuiteStructure

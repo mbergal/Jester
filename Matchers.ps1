@@ -23,6 +23,12 @@ function ShouldBe( [Parameter(ValueFromPipeline=$true)] $actual, [Parameter(Posi
         { throw New-Object JesterFailure( $expected, $actual, ( $diff | Out-String )) }
     }
 
+function ShouldBeTrue(  [Parameter(ValueFromPipeline=$true)] $actual )
+    {
+    if ( -not $actual )
+        { throw New-Object JesterFailure( $true, $actual ) }
+    }
+
 function Should-Not-Be( [Parameter(ValueFromPipeline=$true)] $actual, [Parameter(Position=0)]$expected )
     {
     if ( $actual -eq $expected ) 
