@@ -8,13 +8,20 @@ Describe "Something" `
             {
             throw "Before fails"
             }
-        It "this is not going to be executed" `
+        Describe "This suite will not get executed" `
             {
-            Write-Host "Not executed It"
-            }
-        It "this is not going to be executed too" `
-            {
-            Write-Host "Not executed It 2"
+            Before `
+                {
+                Write-Host "Not executed Before"    
+                }
+            It "this is not going to be executed" `
+                {
+                Write-Host "Not executed It"
+                }
+            It "this is not going to be executed too" `
+                {
+                Write-Host "Not executed It 2"
+                }
             }
         }
     Describe "This will still work" `
@@ -26,4 +33,4 @@ Describe "Something" `
         }
     }
     
-Invoke-Jester -Test * -NoOutline
+Invoke-Jester -Test * 

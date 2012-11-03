@@ -41,37 +41,45 @@ Describe "Jester" {
         
 
     Describe "Test Fixtures" {
-        Describe "When before is specified" {
-            It "it is executed before test" {
-                Invoke-Test '.\test-specs\before.ps1' -Expected  @( "Before", "It" )
+        Describe "Before" `
+            {
+            Describe "When before is specified" {
+                It "it is executed before test" {
+                    Invoke-Test '.\test-specs\before.ps1' -Expected  @( "Before", "It" )
+                    }
+                }
+            Describe "When before is specified in multiple nested suites" -Id "mbe" {
+                It "It is executed before test" {
+                    Invoke-Test '.\test-specs\multiple_befores.ps1' -Expected  @( "Outer Before", "Inner Before", "It" )
+                    }
+                }
+            Describe "When before fails" {
+                It "Following befores do not get executed" {
+                    Invoke-Test '.\test-specs\before_fails.ps1'  -NotContains @( "Not executed Before" )
+                    }
+                It "Tests inside suites with failed befores are not executed" {
+                    Invoke-Test '.\test-specs\before_fails.ps1'  -NotContains @( "Not executed It" )
+                    }
+                It "Other suites are executed" {
+                    Invoke-Test '.\test-specs\before_fails.ps1'  -Contains @( "Next suite is executed" )
+                    }
                 }
             }
-        Describe "When before is specified in multiple nested suites" -Id "mbe" {
-            It "it is executed before test" {
-                Invoke-Test '.\test-specs\multiple_befores.ps1' -Expected  @( "Outer Before", "Inner Before", "It" )
+
+        Describe "After" `
+            {
+            Describe "When after is specified" {
+                It "it is executed after test" {
+                    Invoke-Test '.\test-specs\after.ps1'  -Expected @( "It", "After" )
+                    }
                 }
-            }
-        Describe "When before fails" {
-            It "Following befores do not get executed" {
-                Invoke-Test '.\test-specs\before_fails.ps1'  -Contains @( "Next suite is executed" )
+            Describe "When after is specified in multiple nested suites" {
+                It "it is executed in the sequence from inner suite to outer suite" {
+                    }
                 }
-            It "Suites inside suite that contains failing before are not executed" {
-                Invoke-Test '.\test-specs\before_fails.ps1'  -Contains @( "Next suite is executed" )
-                }
-            It "Tests inside suites are not executed and considered failed" {
-                Invoke-Test '.\test-specs\before_fails.ps1'  -Contains @( "Next suite is executed" )
-                }
-            }
-        Describe "When after is specified" {
-            It "it is executed before test" {
-                }
-            }
-        Describe "When after is specified in multiple nested suites" {
-            It "it is executed before test" {
-                }
-            }
-        Describe "When after fails" {
-            It "it is executed before test" {
+            Describe "When after fails" {
+                It "it is executed before test" {
+                    }
                 }
             }
         }
