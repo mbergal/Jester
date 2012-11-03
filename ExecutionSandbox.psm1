@@ -1,8 +1,6 @@
 function Invoke-InSandbox( $context, $befores, $afters, $it )
     {
-    # $befores |  %{ @( "-- before --", $_ ) } | Out-Host
-    # $it      |  %{ @( "-- it ---", $_ ) } | Out-Host
-
+    $Context = $context
     try {
         if ( $befores -ne $null )
                 {

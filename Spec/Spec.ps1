@@ -4,7 +4,7 @@ Import-Module (Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 Describe "Jester" {
     Before {
-        function Invoke-Test( $path, [object] $Expected = $null, [object] $Contains = $null )
+        function Invoke-Test( $path, [object] $Expected = $null, [object] $Contains = $null, [object] $NotContains = $null )
             {
             $result =  & powershell.exe $path
             if ( $Expected -ne $null )
@@ -14,6 +14,10 @@ Describe "Jester" {
             if ( $Contains -ne $null )
                 {
                 $result | Where-Object { $_ -eq $Contains } | Measure | Select-Object { $_.Count -ge 1 }  | ShouldBeTrue
+                }
+            if ( $NotContains -ne $null )
+                {
+                $result | Where-Object { $_ -eq $NotContains } | Measure | Select-Object { $_.Count -eq 0 }  | ShouldBeTrue
                 }
             }
         }
@@ -80,6 +84,14 @@ Describe "Jester" {
             Describe "When after fails" {
                 It "it is executed before test" {
                     }
+                }
+            }
+
+        Describe "Context" `
+            {
+            It "It should have `$Context.SuiteDirectory pointing to directory where suite file is located" `
+                {
+                Invoke-Test '.\test-specs\suite_directory.ps1'  -NotContains "$Context.SuiteDirectory= "
                 }
             }
         }

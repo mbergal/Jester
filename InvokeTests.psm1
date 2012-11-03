@@ -87,8 +87,8 @@ function Test-Suite( $Suite, [string] $Contains )
     
 function Invoke-Test( $Test, $NoOutline )
     {
-    ( $JesterContext, $befores, $afters, $it ) = Prepare-Test $Test
-    $result = Invoke-InSandbox $JesterContext $befores $afters $it
+    ( $context, $befores, $afters, $it ) = Prepare-Test $Test
+    $result = Invoke-InSandbox $context $befores $afters $it
     if ( -not $NoOutline )
         {
         Show-Progress $test -Result $result
@@ -97,7 +97,7 @@ function Invoke-Test( $Test, $NoOutline )
 
 function Prepare-Test( $test, [switch]$NoExecute )
     {
-    $JesterContext = New-Object PSObject -Property @{
+    $context = New-Object PSObject -Property @{
         SuiteLocation = $test.Source
         SuiteDirectory = (Split-Path -Parent $test.Source)
         }
@@ -113,7 +113,7 @@ function Prepare-Test( $test, [switch]$NoExecute )
         [array]::Reverse( $afters )
         }
     $it = $test.Definition
-    return @( $JesterContext, $befores, $afters, $it )
+    return @( $context, $befores, $afters, $it )
     }
 
 Export-ModuleMember Invoke-Tests
