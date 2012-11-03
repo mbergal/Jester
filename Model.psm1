@@ -146,16 +146,6 @@ function Select-TestStructure( [parameter(ValueFromPipeline=$true)]$test )
 
     }
 
-function Is-Test( $testOrSuite )
-    {
-    return $testOrSuite.Type -eq "Test"
-    }
-
-function Is-Suite( $testOrSuite )
-    {
-    return $testOrSuite.Type -eq "Suite"
-    }
-
 $script:rootSuite = New-Suite 
 
 Export-ModuleMember New-Suite
