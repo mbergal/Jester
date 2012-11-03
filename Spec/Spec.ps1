@@ -95,4 +95,17 @@ Describe "Jester" {
                 }
             }
         }
+
+    Describe "Execution" `
+        {
+        Describe "When test fails" `
+            {
+            It "Should be shown as failed" `
+                {
+                }
+            It "Should be counted in failed tests" `
+                {
+                }
+            }
+        }
 }

@@ -1,4 +1,6 @@
-describe -Id "p" "Player" {
+Import-Module (Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) ..\..\Jester.psd1 )
+
+Describe  "Player" -Id "p" {
     Before `
         {
         . .\Player.ps1
@@ -7,17 +9,17 @@ describe -Id "p" "Player" {
         $player = New-Player;
         $song = New-Song;
 
-        function Should-BePlaying
+        function ShouldBePlaying
           {
           }
         }
 
     It "should be able to play a Song" {
        Start-Playing -Player $player -Song $song
-       $player.currentlyPlayingSong | Should-Be $song
+       $player.CurrentlyPlayingSong | ShouldBe $song
 
        # demonstrates use of custom matcher
-       $player | Should-BePlaying;
+       $player | ShouldBePlaying;
        };
 
     Describe "when song has been paused" {
@@ -29,10 +31,10 @@ describe -Id "p" "Player" {
 
       It "should indicate that the song is currently paused" `
         {
-        $player.IsPlaying | Should-Be $false
+#        $player.IsPlaying | ShouldBe $false
 
         # demonstrates use of 'not' with a custom matcher
-        player.isPlaying | Should-Not-BePlaying
+#        $player.IsPlaying | ShouldNotBePlaying
         }
 
     It "should be possible to resume" `
@@ -65,3 +67,5 @@ describe -Id "p" "Player" {
       }
     }
   }
+
+Invoke-Jester 
