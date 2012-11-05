@@ -52,6 +52,15 @@ function Invoke-Jester
            [Parameter(ParameterSetName="Test")][switch] $NoExecute = $false,
            [Parameter(ParameterSetName="Test")][switch] $NoOutline = $false )
 
+    if ( $NoOutline )
+        {
+        $announcer = New-ConsoleAnnouncer
+        }
+    else
+        {
+        $announcer = New-NullAnnouncer
+        }
+
     if ( (Get-RootSuite).Children.Length -gt 0 )
         {
         if ( $Show ) 
@@ -61,10 +70,9 @@ function Invoke-Jester
         else
             {
             Invoke-Tests `
-                -Suite $null `
                 -Test $Test `
                 -NoExecute:$NoExecute `
-                -NoOutline:$NoOutline
+                -Announcer $announcer
             }
         }
     else

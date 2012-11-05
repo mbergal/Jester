@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 function ShouldThrow( [Parameter(ValueFromPipeline=$True)][scriptblock] $block, [string]$message = '' )
     {
     try {

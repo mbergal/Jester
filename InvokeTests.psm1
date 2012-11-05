@@ -5,60 +5,53 @@ Import-Module (Resolve-RelativePath Model.psm1)
 Import-Module (Resolve-RelativePath ExecutionSandbox.psm1)
 
 
-function Invoke-Tests(  [string]    $Test, 
-                        [switch]    $NoExecute,
-                        [switch]    $NoOutline
+function Invoke-Tests(  [string]                        $Test, 
+                        [switch]                        $NoExecute,
+                        [Parameter(Mandatory=$true)]    $Announcer
                          )
     {
     function Invoke-Tests(  [object]    $Suite = $null,     
-                            [string]    $Test
+                            [string]    $Test,
+                            [object]    $Announcer
                          )
         {
         foreach( $testOrSuite in $Suite.Children )
             {
-            switch ( $testOrSuite.Type )
+        switch ( $testOrSuite.Type )
                 {
                 "Suite"                   
                     {
                     $suite = $testOrSuite
                     if ( Test-Suite -Suite $suite  -Contains $Test )
                         {
-                        Invoke-Suite -Suite $suite  -Test $Test -NoExecute:$NoExecute -NoOutline:$NoOutline
+                        Invoke-Suite -Suite $suite  -Test $Test -NoExecute:$NoExecute -Announcer $Announcer
                         }
                     }
                 "Test" 
                     {
-                    Invoke-Test $testOrSuite -NoOutline:$NoOutline
+                    Invoke-Test $testOrSuite -Announcer $Announcer
                     }
                 }
             }
         }
 
-    function Invoke-Suite( $suite, $test, $NoExecute, $NoOutline )
+    function Invoke-Suite( [Parameter(Mandatory=$true)]     $suite, 
+                           [Parameter(Mandatory=$true)]     $test, 
+                           [Parameter(Mandatory=$true)]     $NoExecute,
+                           [Parameter(Mandatory=$true)]     $Announcer )
         {
-        Start-Suite -Suite $suite
-        Invoke-Tests  $suite -Test $Test -NoExecute:$NoExecute -NoOutline:$NoOutline
-        Finish-Suite -Suite $suite
+        Show-Progress $Announcer $Suite
+        Invoke-Tests  $suite -Test $Test -NoExecute:$NoExecute -Announcer $Announcer
+        # Finish-Suite -Suite $suite
         }
 
-    function Start-Suite( [Parameter(Mandatory=$true)] $Suite )
-        {
-        if ( -not $NoOutline )
-            {
-            Show-Progress $Suite
-            }
-        }
-
-    function Finish-Suite( [Parameter(Mandatory=$true)] $Suite )
-        {
-        }
-
-    if ( -not $NoOutline ) { Start-Progress }
+    Start-Progress $Announcer
     Invoke-Tests `
         -Suite (Get-RootSuite) `
         -Test $Test `
-        -NoExecute:$NoExecute
-    if ( -not $NoOutline ) { Stop-Progress }
+        -NoExecute:$NoExecute `
+        -Announcer $Announcer
+    Stop-Progress $Announcer
     }
 
 function Test-Suite( $Suite, [string] $Contains )
@@ -85,14 +78,14 @@ function Test-Suite( $Suite, [string] $Contains )
         }
     }
     
-function Invoke-Test( $Test, $NoOutline )
+function Invoke-Test( [Parameter(Mandatory=$true)]   $Test,
+                      [Parameter(Mandatory=$true)]   $Announcer )
     {
     ( $context, $befores, $afters, $it ) = Prepare-Test $Test
+
+    Show-Progress $Announcer -Test $test -Result $result
     $result = Invoke-InSandbox $context $befores $afters $it
-    if ( -not $NoOutline )
-        {
-        Show-Progress $test -Result $result
-        }
+    Show-Progress $Announcer -Test $test -Result $result
     }
 
 function Prepare-Test( $test, [switch]$NoExecute )

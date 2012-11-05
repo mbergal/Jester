@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 function New-Suite( [string]        $Id, 
                     [string]        $Name,
                     [scriptblock]   $Definition, 

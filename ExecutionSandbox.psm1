@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 function Invoke-InSandbox( $context, $befores, $afters, $it )
     {
     $Context = $context
@@ -17,7 +19,16 @@ function Invoke-InSandbox( $context, $befores, $afters, $it )
         return "failure"
         }
 
-    . $MyInvocation.MyCommand.Module $it
+    try {
+        . $MyInvocation.MyCommand.Module $it    
+        }
+    catch [System.Exception]
+        {
+        Write-Host -Foreground Red $_.Exception.Message
+        Write-Host -Foreground Red $_.InvocationInfo.PositionMessage.TrimStart( "`n`r")
+        return "failure" 
+        }
+    
 
     try {
         if ( $afters -ne $null )

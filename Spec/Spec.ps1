@@ -34,10 +34,11 @@ Describe "Jester" {
 
         Describe "When invoked with -Test" {
             It "Executes tests" {
-                
+                #throw "Not implemented"                
                 }
             Describe "And tests are specified with wildcard" {
                 It "executes suites and tests matching wildcard" {
+                    #throw "Not implemented"
                     }
                 }
             }
@@ -102,10 +103,20 @@ Describe "Jester" {
             {
             It "Should be shown as failed" `
                 {
+                #throw "Not implemented"
                 }
             It "Should be counted in failed tests" `
                 {
+                #throw "Not implemented"
                 }
+            }
+        }
+
+    Describe "Matchers" `
+        {
+        Describe "ShouldBe" `
+            {
+            #throw "Not implemented"
             }
         }
 }
