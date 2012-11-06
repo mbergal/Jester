@@ -116,7 +116,9 @@ Describe "Jester" {
         {
         Describe "ShouldBe" `
             {
-            #throw "Not implemented"
+            It "Not implemented" {
+            throw "Not implemented"
+            }
             }
         }
 }

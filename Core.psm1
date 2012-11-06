@@ -54,11 +54,11 @@ function Invoke-Jester
 
     if ( $NoOutline )
         {
-        $announcer = New-ConsoleAnnouncer
+        $announcer = New-NullAnnouncer
         }
     else
         {
-        $announcer = New-NullAnnouncer
+        $announcer = New-ConsoleAnnouncer
         }
 
     if ( (Get-RootSuite).Children.Length -gt 0 )
