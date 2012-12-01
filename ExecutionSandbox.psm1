@@ -8,7 +8,7 @@ function Invoke-InSandbox( $context, $befores, $afters, $it )
                 {
                 foreach( $before in $befores ) 
                     {
-                    . $MyInvocation.MyCommand.Module $before
+                    . $MyInvocation.MyCommand.Module $before  | Out-Null
                     }
                 }
         }
@@ -20,7 +20,7 @@ function Invoke-InSandbox( $context, $befores, $afters, $it )
         }
 
     try {
-        . $MyInvocation.MyCommand.Module $it    
+        . $MyInvocation.MyCommand.Module $it   | Out-Null
         }
     catch [System.Exception]
         {
@@ -35,7 +35,7 @@ function Invoke-InSandbox( $context, $befores, $afters, $it )
                 {
                 foreach( $after in $afters ) 
                     {
-                    . $MyInvocation.MyCommand.Module $after
+                    . $MyInvocation.MyCommand.Module $after | Out-Null
                     }
                 }
         }
