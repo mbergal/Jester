@@ -1,1 +1,1 @@
-powershell .\Spec.ps1;Invoke-Jester 
+powershell .\Spec.ps1;Invoke-Jester %*
