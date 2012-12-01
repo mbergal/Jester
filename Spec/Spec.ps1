@@ -110,8 +110,6 @@ Describe "Jester" {
             It "Should be counted in failed tests" `
                 {
                 Invoke-Test '.\test-specs\failed_test.ps1' | ShouldContain "Ran 1 tests ( 1 failed, 0 succeeded )"
-
-                throw "Not implemented"
                 }
             }
         }
@@ -130,7 +128,7 @@ Describe "Jester" {
                 ShouldThrow { 1 | ShouldBe $null }
                 }
             }
-            
+
         Describe "ShouldContain" `
             {
             It "Should match if substring is contained in actual" `
