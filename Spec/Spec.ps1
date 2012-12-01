@@ -80,10 +80,12 @@ Describe "Jester" {
                 }
             Describe "When after is specified in multiple nested suites" {
                 It "it is executed in the sequence from inner suite to outer suite" {
+                    throw "Not implemented"
                     }
                 }
             Describe "When after fails" {
                 It "it is executed before test" {
+                    throw "Not implemented"
                     }
                 }
             }
@@ -103,10 +105,12 @@ Describe "Jester" {
             {
             It "Should be shown as failed" `
                 {
-                throw "Not implemented"
+                Invoke-Test '.\test-specs\failed_test.ps1' | ShouldContain "1.1            Test [Failed]"
                 }
             It "Should be counted in failed tests" `
                 {
+                Invoke-Test '.\test-specs\failed_test.ps1' | ShouldContain "Ran 1 tests ( 1 failed, 0 succeeded )"
+
                 throw "Not implemented"
                 }
             }
@@ -116,9 +120,26 @@ Describe "Jester" {
         {
         Describe "ShouldBe" `
             {
-            It "Not implemented" {
-            throw "Not implemented"
+            It "Should match `$null and `$null" `
+                {
+                $null | ShouldBe $null
+                }
+            It "Should not match `$null and  not `$null" `
+                {
+                ShouldThrow { $null | ShouldBe 1 }
+                ShouldThrow { 1 | ShouldBe $null }
+                }
             }
+        Describe "ShouldContain" `
+            {
+            It "Should match if substring is contained in actual" `
+                {
+                "Abc" | ShouldContain -Substring "bc"
+                }
+            It "Should not match if substring is not contained in actual" `
+                {
+                ShouldThrow { "Abc" | ShouldContain -Substring "bc" }
+                }
             }
         }
 }

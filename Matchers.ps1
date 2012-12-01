@@ -11,24 +11,41 @@ function ShouldThrow( [Parameter(ValueFromPipeline=$True)][scriptblock] $block, 
         $actualMessage = $exception.Exception.Message
         if ( -not [string]::IsNullOrEmpty( $message ) -and $message -ne $actualMessage )
             {
-            throw New-Object JesterFailure( "Thrown exception with message `"$message`"", "Thrown exception with message `"$actualMessage`"" )    
+            throw New-Object JesterFailure( "Thrown exception with message `"$message`"", "Thrown exception with message `"$actualMessage`"", $null )    
             }
         return
         }
-    throw New-Object JesterFailure( "Thrown exception", "No exception was thrown" )    
+    throw New-Object JesterFailure( "Thrown exception", "No exception was thrown", $null )    
     }
     
 function ShouldBe( [Parameter(ValueFromPipeline=$true)] $actual, [Parameter(Position=0)]$expected )
     {
-    $diff = Compare-Object $actual $expected
-    if ( $diff ) 
-        { throw New-Object JesterFailure( $expected, $actual, ( $diff | Out-String )) }
+    if ( $actual -eq $null -and $expected -eq $null )
+        {}
+    elseif ( $actual -ne $null -or $expected -ne $null ) 
+        {
+        throw New-Object JesterFailure( $expected, $actual, "" );
+        }
+    else 
+        {
+        $diff = Compare-Object $actual $expected
+        if ( $diff ) 
+            { throw New-Object JesterFailure( $expected, $actual, ( $diff | Out-String )) }
+        }
+    }
+
+function ShouldContain( [Parameter(ValueFromPipeline=$true)] $actual, [string]  $substring )
+    {
+    if ( -not ( ([string]$actual).Contains( $substring ) ) )
+        { throw New-Object JesterFailure( "To contain $substring", "`"$actual`" didn't contain `"$substring`"", "" )}
+    return $actual
     }
 
 function ShouldBeTrue(  [Parameter(ValueFromPipeline=$true)] $actual )
     {
     if ( -not $actual )
         { throw New-Object JesterFailure( $true, $actual ) }
+    return $actual
     }
 
 function Should-Not-Be( [Parameter(ValueFromPipeline=$true)] $actual, [Parameter(Position=0)]$expected )

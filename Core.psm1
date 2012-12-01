@@ -94,3 +94,5 @@ Export-ModuleMember Describe
 Export-ModuleMember It
 Export-ModuleMember ShouldBe
 Export-ModuleMember ShouldBeTrue
+Export-ModuleMember ShouldThrow
+Export-ModuleMember ShouldContain
