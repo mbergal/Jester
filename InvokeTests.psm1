@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-Import-Module (Resolve-RelativePath Progress.psm1)
+Import-Module (Resolve-RelativePath Announcers.psm1)
 Import-Module (Resolve-RelativePath Model.psm1) 
 Import-Module (Resolve-RelativePath ExecutionSandbox.psm1)
 
