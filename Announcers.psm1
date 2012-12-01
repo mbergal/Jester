@@ -85,7 +85,9 @@ function New-ConsoleAnnouncer()
         }
     }
 
-function Write-TestLine( $Test, $Color )
+function Write-TestLine( [Parameter(Mandatory=$true)]           $Test, 
+                         [Parameter(Mandatory=$true)][string]   $Color,
+                         [string]                               $Result )
     {
     Write-Host -NoNewLine ([string]::Format( "{0,-10}", $Test.Id ))
     Write-Host -Foreground $color ( " " * 4 * ( (Get-Level $Test) -1 ) ), $Test.Name 

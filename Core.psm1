@@ -37,7 +37,7 @@ function Resolve-RelativePath( $path, $invocation )
 
 Import-Module (Resolve-RelativePath Api.psm1)
 Import-Module (Resolve-RelativePath InvokeTests.psm1)
-Import-Module (Resolve-RelativePath Progress.psm1)
+Import-Module (Resolve-RelativePath Announcers.psm1)
 Import-Module (Resolve-RelativePath Model.psm1)
 
 . (Resolve-RelativePath Matchers.ps1)
