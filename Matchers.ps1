@@ -44,7 +44,7 @@ function ShouldContain( [Parameter(ValueFromPipeline=$true)] $actual, [string]  
 function ShouldBeTrue(  [Parameter(ValueFromPipeline=$true)] $actual )
     {
     if ( -not $actual )
-        { throw New-Object JesterFailure( $true, $actual ) }
+        { throw New-Object JesterFailure( $true, $actual, "" ) }
     return $actual
     }
 

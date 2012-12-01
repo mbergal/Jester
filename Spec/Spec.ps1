@@ -130,6 +130,7 @@ Describe "Jester" {
                 ShouldThrow { 1 | ShouldBe $null }
                 }
             }
+            
         Describe "ShouldContain" `
             {
             It "Should match if substring is contained in actual" `
@@ -138,7 +139,36 @@ Describe "Jester" {
                 }
             It "Should not match if substring is not contained in actual" `
                 {
-                ShouldThrow { "Abc" | ShouldContain -Substring "bc" }
+                ShouldThrow { "Abc" | ShouldContain -Substring "bce" }
+                }
+            }
+
+        Describe "ShouldThrow" `
+            {
+            It "Should match if exception is thrown" `
+                {
+                $exceptionThrown = $false
+                try {
+                    ShouldThrow { throw "Error" }       
+                    }
+                catch
+                    {
+                    $exceptionThrown = $true
+                    }
+                -not $exceptionThrown | ShouldBeTrue
+                }
+
+            It "Should not match if no exception is thrown" `
+                {
+                $exceptionThrown = $false
+                try {
+                    ShouldThrow {}       
+                    }
+                catch
+                    {
+                    $exceptionThrown = $true
+                    }
+                $exceptionThrown | ShouldBeTrue
                 }
             }
         }
