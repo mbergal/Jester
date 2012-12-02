@@ -4,7 +4,16 @@ Import-Module (Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 Describe "Jester" {
     Before {
-        function Invoke-Test( $path, [object] $Expected = $null, [object] $Contains = $null, [object] $NotContains = $null )
+        function ShouldContainLine(  [Parameter(ValueFromPipeline=$true)][string[]] $actual, [Parameter(Mandatory=$true)]$line )
+            {
+            if ( -not ( $result | Where-Object { $_ -eq $c } | Measure | %{ $_.Count -ge 1 } ) )
+                {
+                $actualText = [string]::Join( "`n", $actual )
+                throw New-Object JesterFailure( "Contains line `"$line`"", "`n$actualText does not contain line `"$line`"", "" );
+                }
+            }
+
+        function Invoke-Test( $path, [object] $Expected = $null, [string[]] $Contains = $null, [object] $NotContains = $null )
             {
             $result =  & powershell.exe $path
             if ( $Expected -ne $null )
@@ -13,7 +22,10 @@ Describe "Jester" {
                 }
             if ( $Contains -ne $null )
                 {
-                $result | Where-Object { $_ -eq $Contains } | Measure | Select-Object { $_.Count -ge 1 }  | ShouldBeTrue
+                foreach( $c in $Contains )
+                    {
+                    (,$result) | ShouldContainLine -Line $c
+                    }
                 }
             if ( $NotContains -ne $null )
                 {
@@ -22,23 +34,46 @@ Describe "Jester" {
             }
         }
 
-    Describe "Invocation" {
-        Before {
-            }
+    Describe "Invocation" -Id invoc `
+        {
+        Before {}
         
-        Describe "When invoked with -Show" {
-            It "Shows suite structure" {
-                Invoke-Test '.\test-specs\show_suite_structure.ps1' 
+        Describe "When invoked with -Show" `
+            {
+            It "Shows suite structure" `
+                {
+                Invoke-Test '.\test-specs\show_suite_structure.ps1'  
                 }
             }
 
-        Describe "When invoked with -Test" {
-            It "Executes tests" {
-                throw "Not implemented"                
+        Describe "When invoked with -Test" `
+            {
+            Describe "without test wildcard" `
+                {
+                It "Executes all tests" `
+                    {
+                    Invoke-Test '.\test-specs\executes_all_tests.ps1' -Contains "Test 1", "Test 2", "Test 3"
+                    }
                 }
-            Describe "And tests are specified with wildcard" {
-                It "executes suites and tests matching wildcard" {
-                    throw "Not implemented"
+            Describe "And tests are specified with wildcard" `
+                {
+                It "Executes suites and tests matching wildcard" `
+                    {
+                    Invoke-Test '.\test-specs\executes_all_tests.ps1' -Contains "Test 1", "Test 2", "Test 3"
+                    }
+                }
+            Describe "And test is specified with id" `
+                {
+                It "Executes test with this id" `
+                    {
+                    Invoke-Test '.\test-specs\executes_test_by_id.ps1' -Contains "Test 2" -NotContains "Test 1"
+                    }
+                }
+            Describe "And suite is specified with id" `
+                {
+                It "Executes all tests in suite with this id" `
+                    {
+                    Invoke-Test '.\test-specs\executes_suite_by_id.ps1' -Contains "Suite 2 Test 1", "Suite 2 Test 2" -NotContains "Suite 1 Test 1"
                     }
                 }
             }
@@ -66,7 +101,7 @@ Describe "Jester" {
                     Invoke-Test '.\test-specs\before_fails.ps1'  -NotContains @( "Not executed It" )
                     }
                 It "Other suites are executed" {
-                    Invoke-Test '.\test-specs\before_fails.ps1'  -Contains @( "Next suite is executed" )
+                    Invoke-Test '.\test-specs\before_fails.ps1'  -Contains "Next suite is executed"
                     }
                 }
             }
