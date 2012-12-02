@@ -1,4 +1,5 @@
 $ErrorActionPreference = "Stop"
+Set-StrictMode -Version 2.0
 
 Import-Module (Resolve-RelativePath Announcers.psm1)
 Import-Module (Resolve-RelativePath Model.psm1) 
@@ -17,20 +18,23 @@ function Invoke-Tests(  [string]                        $Test,
         {
         foreach( $testOrSuite in $Suite.Children )
             {
-        switch ( $testOrSuite.Type )
+            if ( SuiteMatches -Suite $testOrSuite -Match $Test )
                 {
-                "Suite"                   
+                switch ( $testOrSuite.Type )
                     {
-                    $suite = $testOrSuite
-                    if ( Test-Suite -Suite $suite  -Contains $Test )
+                    "Suite"                   
                         {
-                        Invoke-Suite -Suite $suite  -Test $Test -NoExecute:$NoExecute -Announcer $Announcer
+                        Invoke-Suite -Suite $testOrSuite -Test * -NoExecute:$NoExecute -Announcer $Announcer
+                        }
+                    "Test" 
+                        {
+                        Invoke-Test -Test $testOrSuite -Announcer $Announcer
                         }
                     }
-                "Test" 
-                    {
-                    Invoke-Test $testOrSuite -Announcer $Announcer
-                    }
+                }
+            elseif ( $testOrSuite.IsSuite -and ( SuiteChildrenMatch -Suite $testOrSuite -Match $Test ) )
+                {
+                Invoke-Suite -Suite $testOrSuite  -Test $Test -NoExecute:$NoExecute -Announcer $Announcer
                 }
             }
         }
@@ -54,36 +58,39 @@ function Invoke-Tests(  [string]                        $Test,
     Stop-Progress $Announcer
     }
 
-function Test-Suite( $Suite, [string] $Contains )
+function SuiteMatches( $Suite, [string] $Match )
     {
-    $testOrSuiteName = $Suite.Name
-    if ( $Suite.Name -eq $Contains `
-        -or $Contains -eq "*" `
-        -or $Suite.Id -eq $Contains ) 
-        { 
-        return $true 
+    return  `
+        $Match -eq "*"  `
+        -or $Suite.Id -eq $Match
+    }
+    
+function SuiteChildrenMatch( $Suite, [string] $Match )
+    {
+    if ( SuiteMatches -Suite $Suite -Match $Match ) 
+        {
+        return $true
         }
-    else 
-        { 
-        if ( $Suite.Children -ne $null )
+
+    if ( $Suite.IsSuite )
+        {
+        foreach( $childSuiteOrTest in $Suite.Children )
             {
-            foreach( $childSuiteOrTest in $Suite.Children )
+            if ( SuiteChildrenMatch $childSuiteOrTest -Match $Match )
                 {
-                if ( Test-Suite $childSuiteOrTest -Contains $Contains )
-                    {
-                    return $true;
-                    }
+                return $true
                 }
             }
         }
+    return $false
     }
-    
+
 function Invoke-Test( [Parameter(Mandatory=$true)]   $Test,
                       [Parameter(Mandatory=$true)]   $Announcer )
     {
     ( $context, $befores, $afters, $it ) = Prepare-Test $Test
 
-    Show-Progress $Announcer -Test $test -Result $result
+    Show-Progress $Announcer -Test $test 
     $result = Invoke-InSandbox $context $befores $afters $it
     Show-Progress $Announcer -Test $test -Result $result
     }

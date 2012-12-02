@@ -1,9 +1,10 @@
 #
 # This has been copied from what UofI.Powershell.Tools, 
-# it supports much more use cases than I have @
+# it supports much more use cases than I have here
 #
 
 $ErrorActionPreference = "Stop"
+Set-StrictMode -Version 2.0
 
 function Resolve-RelativePath( $path, $invocation )
     {

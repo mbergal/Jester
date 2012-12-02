@@ -1,0 +1,1939 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ShouldCont",
+				"ShouldContainLine"
+			],
+			[
+				"SHou",
+				"ShouldContain"
+			],
+			[
+				"Should",
+				"ShouldBeTrue"
+			],
+			[
+				"Shou",
+				"ShouldThrow"
+			],
+			[
+				"sub",
+				"substr"
+			],
+			[
+				"th",
+				"throw"
+			],
+			[
+				"getCount",
+				"getCountry"
+			],
+			[
+				"cont",
+				"country"
+			],
+			[
+				"country",
+				"countryInput"
+			],
+			[
+				"min",
+				"minutesInput"
+			],
+			[
+				"ho",
+				"hoursInput"
+			],
+			[
+				"count",
+				"countryInput"
+			],
+			[
+				"minutes",
+				"minutes"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"New-TrayCallStringF",
+				"New-TrayCallStringFromPageCounts"
+			],
+			[
+				"param",
+				"Parameter"
+			],
+			[
+				"p",
+				"pagelist"
+			],
+			[
+				"SC",
+				"script	Tag"
+			],
+			[
+				"pro",
+				"projectId"
+			],
+			[
+				"G",
+				"Get-Project"
+			],
+			[
+				"pa",
+				"param"
+			],
+			[
+				"config",
+				"configFilePath"
+			],
+			[
+				"list-s",
+				"list-style-type"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"anno",
+				"Announcer"
+			],
+			[
+				"Par",
+				"Parameter"
+			],
+			[
+				"Not",
+				"NotContains"
+			],
+			[
+				"N",
+				"NotContains"
+			],
+			[
+				"Ex",
+				"Expected"
+			],
+			[
+				"Exp",
+				"Export-ModuleMember"
+			],
+			[
+				"exe",
+				"executed"
+			],
+			[
+				"scr",
+				"scripterOutputFile"
+			],
+			[
+				"C",
+				"Contains"
+			],
+			[
+				"Test",
+				"Test-Suite"
+			],
+			[
+				"Te",
+				"testSequence"
+			],
+			[
+				"Exe",
+				"Execute-Tests"
+			],
+			[
+				"No",
+				"NoExecute"
+			],
+			[
+				"Man",
+				"mandatory"
+			],
+			[
+				"Ema",
+				"EmailFrom"
+			],
+			[
+				"vc",
+				"vcsName"
+			],
+			[
+				"new",
+				"newVcsRoot"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"par",
+				"parent"
+			],
+			[
+				"Get",
+				"Get-ChildIndex"
+			],
+			[
+				"Is",
+				"IsNullOrEmpty"
+			],
+			[
+				"Def",
+				"DefaultId"
+			],
+			[
+				"te",
+				"testsSucceeded"
+			],
+			[
+				"befor",
+				"befores"
+			],
+			[
+				"Para",
+				"parameter"
+			],
+			[
+				"Invo",
+				"Invoke-Test"
+			],
+			[
+				"scrip",
+				"scriptblock"
+			],
+			[
+				"Releas",
+				"ReleaseDirFile"
+			],
+			[
+				"Re",
+				"ReleaseDir"
+			],
+			[
+				"Im",
+				"Importance"
+			],
+			[
+				"Ha",
+				"HawkId"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"source",
+				"sourceVersion"
+			],
+			[
+				"sourc",
+				"sourceVersion"
+			],
+			[
+				"Requi",
+				"requiredMajorVersion"
+			],
+			[
+				"app",
+				"Application"
+			],
+			[
+				"App",
+				"ApplicationName"
+			],
+			[
+				"Get-",
+				"Get-ApplicationVersion"
+			],
+			[
+				"sta",
+				"StagePath"
+			],
+			[
+				"tar",
+				"targetDirectory"
+			],
+			[
+				"ta",
+				"targetDirectory"
+			],
+			[
+				"Ta",
+				"TargetDirectory"
+			],
+			[
+				"Tar",
+				"TargetComputer"
+			],
+			[
+				"sour",
+				"sourceDirectory"
+			],
+			[
+				"Install",
+				"Install-ApplicationRemotely"
+			],
+			[
+				"Install-",
+				"Install-ApplicationRemotly"
+			],
+			[
+				"Install-App",
+				"Install-ApplicationLocally"
+			],
+			[
+				"des",
+				"dest"
+			],
+			[
+				"Out",
+				"Out-String"
+			],
+			[
+				"com",
+				"computer"
+			],
+			[
+				"not",
+				"noteproperty"
+			],
+			[
+				"Me",
+				"MemberType"
+			],
+			[
+				"Dri",
+				"Drivees"
+			],
+			[
+				"free",
+				"freeSpace"
+			],
+			[
+				"Get-D",
+				"Get-DriveReport"
+			],
+			[
+				"dir",
+				"dirToWatch"
+			],
+			[
+				"arch",
+				"archiveDir"
+			],
+			[
+				"in",
+				"inputFileName"
+			],
+			[
+				"output",
+				"outputDir"
+			],
+			[
+				"qu",
+				"queueDir"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "",
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/contact.html",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/continuity.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/coverage.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/UofI.Powershell.Tools/WebTools/Test-Links.psm1",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/fieldtrip.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/fleet_safety.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/flood.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/floodapp_faq.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/forms.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/UofI.Powershell.Tools/WebTools/test/Test-TestLinks.ps1",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Misha/Projects/RiskManagementWebsiteArchive/fusrm/production/RiskManagement.Web.project",
+			"settings":
+			{
+				"buffer_size": 149,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Misha/Projects/UofI.Powershell.Tools/TeamCity/New-TeamCityProject.ps1",
+			"settings":
+			{
+				"buffer_size": 4367,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Misha/Projects/UofI.Powershell.Tools/WebTools/Invoke-HttpMethod.psm1",
+			"settings":
+			{
+				"buffer_size": 1699,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Misha/Projects/uofi_tools/BuildTools/Examples/CopyToParent/Web/Web.csproj",
+			"settings":
+			{
+				"buffer_size": 6992,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Misha/Projects/uofi_tools/BuildTools/Examples/CopyToParent/Web/Web.config",
+			"settings":
+			{
+				"buffer_size": 1947,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/grilling.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/identification.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/index.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/indexprior.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/mitigation.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/other.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Spec/test-specs/multiple_befores.ps1",
+			"settings":
+			{
+				"buffer_size": 418,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Spec/test-specs/suite_directory.ps1",
+			"settings":
+			{
+				"buffer_size": 341,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Spec/test-specs/show_suite_structure.ps1",
+			"settings":
+			{
+				"buffer_size": 217,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Program Files/nodejs/npm",
+			"settings":
+			{
+				"buffer_size": 274,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Program Files/nodejs/a.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Spec/test-specs/before_fails.ps1",
+			"settings":
+			{
+				"buffer_size": 867,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Matchers.ps1",
+			"settings":
+			{
+				"buffer_size": 2697,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Model.psm1",
+			"settings":
+			{
+				"buffer_size": 4751,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "function Should-Throw( [Parameter(ValueFromPipeline=$True)][scriptblock] $block, [string]$message = '' )\n    {\n    try {\n        & $block\n        }\n    catch\n        {\n        $exception = $global:Error[0]\n        $actualMessage = $exception.Exception.Message\n        if ( -not [string]::IsNullOrEmpty( $message ) -and $message -ne $actualMessage )\n            {\n            throw New-Object JesterFailure( \"Thrown exception with message `\"$message`\"\", \"Thrown exception with message `\"$actualMessage`\"\" )    \n            }\n        return\n        }\n    throw New-Object JesterFailure( \"Thrown exception\", \"No exception was thrown\" )    \n    }\n    \nfunction Should-Be( [Parameter(ValueFromPipeline=$true)] $actual, [Parameter(Position=0)]$expected )\n    {\n    $diff = Compare-Object $actual $expected\n    if ( $diff ) \n        { throw New-Object JesterFailure( $expected, $actual, ( $diff | Out-String )) }\n    }\n\nfunction Should-Not-Be( [Parameter(ValueFromPipeline=$true)] $actual, [Parameter(Position=0)]$expected )\n    {\n    if ( $actual -eq $expected ) \n        { throw New-Object JesterFailure( \"not $expected\", $actual ) }\n    }\n\nfunction Should-Be-Null( [Parameter(ValueFromPipeline=$true)] $actual )\n    {\n    if ( $actual -ne $null ) \n        { throw New-Object JesterFailure( \"null\", \"$actual\" ) }\n    }\n\nfunction Should-Not-Be-Null( [Parameter(ValueFromPipeline=$true)] $actual )\n    {\n    if ( $actual -eq $null ) \n        { throw New-Object JesterFailure( \"not null\", \"null\" ) }\n    }\n\nfunction Should-Exist( [Parameter(ValueFromPipeline=$true)] $actual )\n    {\n    if (-not (Test-Path $actual)) \n		{ throw New-Object JesterFailure(\"$actual should exist\",\"$actual not found\")}\n    }\n\nfunction Should-Not-Exist( [Parameter(ValueFromPipeline=$true)] $actual )\n    {\n    if (Test-Path $actual) \n		{ throw New-Object JesterFailure(\"$actual should not exist\",\"$actual was found\")}\n    }\n\n",
+			"file": "/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Jester-Matchers.ps1",
+			"file_size": 1951,
+			"file_write_time": 129959585836307027,
+			"settings":
+			{
+				"buffer_size": 1896,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Add-Type -language CSharpVersion3 @'\npublic class JesterFailure\n    {\n    public string Expected { get; set; }\n    public string Actual { get; set; }\n    public string Difference { get; set; }\n    \n    public JesterFailure(string Expected, string Actual, string Difference )\n        {\n        this.Expected = Expected;\n        this.Actual = Actual;\n        this.Difference = Difference;\n        }\n\n    public override string ToString()\n        {\n        return string.Format(\"Expected: {0}. But was: {1}\\n{2}\", Expected, Actual, Difference   );\n        }\n    }\n'@",
+			"file": "/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Jester-Failure.ps1",
+			"file_size": 580,
+			"file_write_time": 129959536168716203,
+			"settings":
+			{
+				"buffer_size": 563,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Spec/b.ps1",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/PowerShell/Support/Powershell.sublime-build",
+	"command_palette":
+	{
+		"height": 150.0,
+		"selected_items":
+		[
+			[
+				"Install p",
+				"Package Control: Install Package"
+			],
+			[
+				"Install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Reid",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"XML",
+				"Set Syntax: XML"
+			],
+			[
+				"Packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/claims.html",
+		"/C/Users/mbergal/Projects/CambusWebSite/index.html",
+		"/C/Users/Misha/Documents/GitHub/Jester/Progress.psm1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Spec/test-specs/executes_all_tests.ps1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Spec/test-specs/before.ps1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Spec/test-specs/after_fails.ps1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Spec/test-specs/after.ps1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Spec/test-specs/failed_test.ps1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Spec/test-specs/executes_matching_tests.ps1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Spec/test-specs/multiple_afters.ps1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Jester.psd1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Core.psm1",
+		"/C/Users/Misha/Documents/GitHub/Jester/ExecutionSandbox.psm1",
+		"/C/Users/Misha/Documents/GitHub/Jester/JesterFailure.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Spec/Spec.ps1",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/DatabaseTools/Export-DatabaseScript.psm1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/DatabaseTools/Compare-Databases.psm1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/DatabaseTools/Export-DatabaseScript.psm1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/SqlServerTools/Read-DatabaseStructure.psm1",
+		"/C/Users/mbergal/Documents/script.sql",
+		"/C/Program Files (x86)/Haskell Platform/2012.2.0.0/a.hs",
+		"/C/Users/Misha/AppData/Local/Temp/hg-editor-0dhfm5.txt",
+		"/C/Users/mbergal/Projects/Workspaces/McGannCustomization.Workspace2/McGannCustomization/UIParking/config/BS-MBSB-126B/Log4Net.config",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/PSClass/b.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/PSClass/a.ps1",
+		"/D/Users/Misha/Dropbox/Time-Is-Money/c.html",
+		"/D/Users/Misha/Dropbox/Time-Is-Money/b.html",
+		"/D/Users/Misha/Dropbox/Time-Is-Money/images/a.html",
+		"/C/Users/Misha/Stuff/Jester/Matchers.ps1",
+		"/C/Users/Misha/Stuff/Jester/Spec/Spec.ps1",
+		"/C/Users/Misha/Projects/Workspaces/UIHCBilling.Workspace/UIHCBilling/UihcBilling/FileCopiers/FileCopier.cs",
+		"/D/Users/Misha/Dropbox/Time-Is-Money/a.html",
+		"/C/Users/Misha/Projects/Sandbox/Designs/a.html",
+		"/C/Users/mbergal/Projects/Printing.TrayCall/TailCall.ps1",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/DatabaseTools/DatabaseTools.psd1",
+		"/C/Users/Misha/Documents/GitHub/Jester/InvokeTests.psm1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Spec/Spec.ps1",
+		"/C/Users/Misha/Documents/GitHub/Jester/README.md",
+		"/C/Users/mbergal/Projects/Printing.PageSplit/PageSplit.html",
+		"/C/Users/Misha/Documents/GitHub/Jester/Api.psm1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Jester.sublime-project",
+		"/D/Users/Misha/Dropbox/Time-Is-Money/a.dust",
+		"/C/temp/Time-Is-Money/a.html",
+		"/C/Users/mbergal/Projects/Printing.PageSplit/a.ps1",
+		"/C/Users/Misha/Documents/GitHub/Jester/Spec/test-specs/test.ps1",
+		"/C/Users/mbergal/Projects/McGannCustomization.Workspace/McGannCustomization/McGannCustomization.proj",
+		"/C/Users/mbergal/Projects/Workspaces/McGannCustomization.Workspace/McGannCustomization/Dialysis/Dialysis.csproj",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/DatabaseTools/Export-DatabaseSchema.psm1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/DatabaseTools/Export-DatabaseSchema.psm1",
+		"/D/Users/Misha/Mesh/sublime/Data/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/TeamCity/a.xml",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Jester-Progress.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Jester-Model.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Jester-Core.psm1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Jester-Api.ps1",
+		"/C/Users/mbergal/Projects/Workspaces/McGannCustomization.Workspace2/McGannCustomization/EmployeeParking/Web.config",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Spec/test-specs/multiple_afters.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Jester-InvokeTests.ps1",
+		"/C/Users/mbergal/Projects/CicsImport/debug.ps1",
+		"/C/Users/mbergal/Projects/CicsImport/a.ps1",
+		"/C/Users/Misha/Projects/CicsImport/Data/PKVL2628.DTA",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/WebTools/Test-Links.psm1",
+		"/C/Users/mbergal/Projects/McGannCustomization.Workspace/UofI.WebForms.Tools/UofI.WebForms.Tools/Controls/FormValidator/FormValidator.js",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/WebTools/Test-Links.psm1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/XmlTools/XmlTools.psm1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/TeamCity/New-TeamCityProject.ps1",
+		"/C/Program Files/nodejs/a.js",
+		"/C/Users/Misha/Documents/GitHub/Jester/Model.psm1",
+		"/C/Users/mbergal/Projects/McGannCustomization.Workspace/UofI_Tools/BuildTools/UofI.targets",
+		"/D/Users/Misha/Mesh/sublime/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/Users/Misha/Mesh/sublime/Data/Packages/User/JSON.sublime-settings",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/ApplicationTools/test/Test-InvokeTask.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Diagnostics/Get-ComputerReport.psm1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/ApplicationTools/Write-ApplicationEvent.psm1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/ApplicationTools/ApplicationTools.psd1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Diagnostics/Diagnostics.psd1",
+		"/C/Users/mbergal/Projects/PrintingWebOrder.Workspace/UofI_tools/DeployTools/test/Test-CopyToRemoteDirectory.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Diagnostics/ComputerReport.vm",
+		"/C/Users/mbergal/Projects/PrintingWebOrder.Workspace/PrintingWebOrder/PrintingWebOrderApplication/obj/Debug/Package/PackageTmp/bin/DeployTools/Publish-Application.psm1",
+		"/C/Temp/aaaaaa/src/CopyToReferencingProject.targets",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Examples/Player/Song.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Examples/Player/Player.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Examples/Player/Player.Tests.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Examples/Player/a.ps1",
+		"/C/Users/mbergal/Projects/PrintingWebOrder.Workspace/UofI_tools/BuildTools/UofI.targets",
+		"/C/Users/mbergal/Projects/PrintingWebOrder.Workspace/UofI_tools/BuildTools/UofI.Web.targets",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/MetaPeople/Get-MetaPerson.psm1",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/MetaPeople/a.ps1",
+		"/C/Users/mbergal/Projects/PrintingWebOrder.Workspace/UofI_tools/DeployTools/WebDeploy.psm1",
+		"/C/Users/mbergal/Projects/PrintingWebOrder.Workspace/PrintingWebOrder/PrintingWebOrderApplication/obj/Debug/Package/PackageTmp/bin/DeployTools/WebDeploy.psm1",
+		"/C/Users/mbergal/Projects/PrintingWebOrder.Workspace/UofI_tools/DeployTools/Install-Application.psm1",
+		"/C/Users/mbergal/Projects/PrintingWebOrder.Workspace/UofI_tools/BuildTools/Examples/Release/Web/install.ps1",
+		"/C/Users/mbergal/Projects/PrintingWebOrder.Workspace/UofI_tools/DeployTools/Write-Indented.psm1",
+		"/C/Users/Misha/Projects/uofi_tools/DeployTools/Install-Application.psm1",
+		"/C/Users/Misha/Projects/uofi_tools/DeployTools/WebSiteDeployment.psm1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Diagnostics/test/Test-GetComputerReport.ps1",
+		"/C/Program Files (x86)/MSBuild/Microsoft/VisualStudio/v10.0/WebApplications/Microsoft.WebApplication.targets",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Web/a.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/TeamCity/New-TeamCityProject.psm1",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/Bootstrap/Bootstrap.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/ApplicationTools/Invoke-Task.psm1",
+		"/C/Users/Misha/Projects/uofi_tools/DeployTools/WebDeploy.psm1",
+		"/C/Users/Misha/Diagnostics/diagnostics.ps1",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/Wiki/Expand-WikiAclUserGroups.ps1",
+		"/C/Users/Misha/Projects/uofi_tools/DeployTools/a.ps1",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/Diagnostics/test/a.html",
+		"/D/Users/Misha/Dropbox/xlaunch/config.xlaunch",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/WorkQueues/test/FileBasedWorkQueue.Tests.ps1",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/WorkQueues/QueueProcessor.psm1",
+		"/C/Users/mbergal/Projects/UIHCBilling.Workspace/UIHCBilling/UihcBilling.Processor/Queue.ps1",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/WorkQueues/FileBasedWorkQueue.psm1",
+		"/C/Users/mbergal/Backup/a.ps1",
+		"/C/Users/mbergal/Projects/UofI.Powershell.Tools/ESXiTools/ESXiTools.psm1",
+		"/C/Users/mbergal/Projects/UIHCBilling.Workspace/UIHCBilling/UihcBilling.Shell/UihcBilling.Shell.proj",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/DatabaseTools/Clear-Database.psm1",
+		"/C/Users/Misha/AppData/Local/Temp/hg-editor-gf5ghc.txt",
+		"/C/Users/Misha/Projects/UofI.Powershell.Tools/ApplicationTools/ApplicationTools.psm1",
+		"/C/Program Files (x86)/MSBuild/Microsoft/VisualStudio/v10.0/Web/Microsoft.Web.Publishing.targets",
+		"/C/Users/Misha/Projects/uofi_tools/BuildTools/UofI.Web.targets",
+		"/C/Windows/Microsoft.NET/Framework64/v4.0.30319/Microsoft.Common.targets",
+		"/C/Windows/Microsoft.NET/Framework64/v4.0.30319/Microsoft.CSharp.targets",
+		"/C/Users/Misha/AppData/Local/Temp/hg-editor-rrtyud.txt",
+		"/C/Users/Misha/AppData/Local/Temp/hg-editor-rv_tdy.txt",
+		"/D/Users/Misha/Dropbox/xlaunch/server.xlaunch",
+		"/C/Users/mbergal/Mesh/sublime/Data/Packages/User/Preferences.sublime-settings",
+		"/c/users/misha/appdata/local/temp/thg.jnt_zr/UIHCBilling.8.80/FileConverter_UnitTest/Scenario1/expected/kevinr_Report_2012-11-10 0-0-0.txt",
+		"/C/Users/Misha/AppData/Local/Temp/hg-editor-yf7omh.txt"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Match",
+			"Invoke-Test",
+			"When in",
+			"Execu",
+			"getCoun",
+			"mode;",
+			"model",
+			"getChange",
+			"wrapper",
+			"*",
+			"COnfig/",
+			"Content",
+			"config",
+			"\">\n",
+			"ContentTy",
+			"Regen",
+			"toprigh",
+			"topri",
+			"leet",
+			"topright",
+			"topri",
+			"Language Assistance",
+			"SHow-prog",
+			"Start-Progress",
+			"\n        ",
+			"Select-SuiteStructure",
+			") ",
+			"InvocationInfo",
+			"Start-Suite",
+			"Show-Progress",
+			"ServerO",
+			"$server",
+			"update card",
+			"having",
+			"Cardvers",
+			"CardStatus",
+			"CardVersion",
+			"Pause-Playing",
+			"success",
+			"            ",
+			"\n    ",
+			"    \n",
+			"Source",
+			"Definition ",
+			"Source",
+			"'c'",
+			"dest",
+			"Invoke-WebDeploy",
+			"ProductMajorPart",
+			"\n		",
+			"driveData",
+			"Set-PowerCliConfiguration",
+			"IsEmp",
+			"Get-ResultPath",
+			"path",
+			"$path",
+			"$logger",
+			"MoveResult",
+			"DeleteProcessingFile",
+			"Completed",
+			"Copleted",
+			"ItemName",
+			"Get-ResultPath",
+			"ArchiveInputFile",
+			"Get-ResultPath",
+			"MoveResult",
+			"ProcessingCompleted",
+			"GetItem",
+			"ArchiveInputFile",
+			"GetItem",
+			"ProcessingCompleted",
+			"ArchiveInputFile",
+			"ProcessingCompleted",
+			" ProcessingCompleted",
+			"\n                            ",
+			" ProcessingCompleted",
+			"DeleteProcessingFile",
+			"MoveResult",
+			"MoveResul",
+			"ArchiveInputFile",
+			"Get-ResultPath",
+			"ProcessingCompleted",
+			"ArchiveInputFile",
+			"$file",
+			"logger",
+			"{\n",
+			"-\n",
+			"CreateManifestRes",
+			"Include=",
+			"DestinationRelativePath",
+			"FilesForPackagingFromProject",
+			"DestinationRelativePath",
+			"FilesForPackagingFromProject",
+			"target Name=\"FilesForPackagingFromProject",
+			"target name=\"FilesForPackagingFromProject",
+			"FilesForPackagingFromProject ",
+			"Files",
+			"Pipelin",
+			"Pipel",
+			"Files"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$Server"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/contact.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/continuity.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1892.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/coverage.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/mbergal/Projects/UofI.Powershell.Tools/WebTools/Test-Links.psm1",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/fieldtrip.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1158.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/fleet_safety.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/flood.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 497.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/floodapp_faq.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1862.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/forms.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2447.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/Users/mbergal/Projects/UofI.Powershell.Tools/WebTools/test/Test-TestLinks.ps1",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/Users/Misha/Projects/RiskManagementWebsiteArchive/fusrm/production/RiskManagement.Web.project",
+					"settings":
+					{
+						"buffer_size": 149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								136,
+								136
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/Users/Misha/Projects/UofI.Powershell.Tools/TeamCity/New-TeamCityProject.ps1",
+					"settings":
+					{
+						"buffer_size": 4367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/C/Users/Misha/Projects/UofI.Powershell.Tools/WebTools/Invoke-HttpMethod.psm1",
+					"settings":
+					{
+						"buffer_size": 1699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/C/Users/Misha/Projects/uofi_tools/BuildTools/Examples/CopyToParent/Web/Web.csproj",
+					"settings":
+					{
+						"buffer_size": 6992,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1672.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/C/Users/Misha/Projects/uofi_tools/BuildTools/Examples/CopyToParent/Web/Web.config",
+					"settings":
+					{
+						"buffer_size": 1947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/grilling.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/identification.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1442.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/index.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1050.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/indexprior.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1517.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/mitigation.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/other.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 556.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "Spec/test-specs/multiple_befores.ps1",
+					"settings":
+					{
+						"buffer_size": 418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "Spec/test-specs/suite_directory.ps1",
+					"settings":
+					{
+						"buffer_size": 341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "Spec/test-specs/show_suite_structure.ps1",
+					"settings":
+					{
+						"buffer_size": 217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58,
+								58
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "/C/Program Files/nodejs/npm",
+					"settings":
+					{
+						"buffer_size": 274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "/C/Program Files/nodejs/a.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "Spec/test-specs/before_fails.ps1",
+					"settings":
+					{
+						"buffer_size": 867,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "Matchers.ps1",
+					"settings":
+					{
+						"buffer_size": 2697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1612,
+								1612
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "Model.psm1",
+					"settings":
+					{
+						"buffer_size": 4751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Jester-Matchers.ps1",
+					"settings":
+					{
+						"buffer_size": 1896,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Jester-Failure.ps1",
+					"settings":
+					{
+						"buffer_size": 563,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								542,
+								542
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "/C/Users/Misha/Projects/UofI.Powershell.Tools/Jester/Spec/b.ps1",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PowerShell/Support/PowershellSyntax.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"mar",
+				"/C/Users/Misha/Stuff/Jester/Matchers.ps1"
+			],
+			[
+				"",
+				"/C/Users/Misha/Documents/GitHub/Jester/Matchers.ps1"
+			],
+			[
+				"spe",
+				"/C/Users/Misha/Documents/GitHub/Jester/Spec/Spec.ps1"
+			],
+			[
+				"sp",
+				"/C/Users/Misha/Stuff/Jester/Spec/Spec.ps1"
+			],
+			[
+				"in",
+				"/C/Users/Misha/Documents/GitHub/Jester/InvokeTests.psm1"
+			],
+			[
+				"a.",
+				"/C/temp/Time-Is-Money/a.html"
+			],
+			[
+				"exc",
+				"/C/Users/Misha/Projects/UofI.Powershell.Tools/DatabaseTools/Export-DatabaseSchema.psm1"
+			],
+			[
+				"forms",
+				"/C/Users/mbergal/Projects/RiskManagementWebsiteArchive/fusrm/production/forms.html"
+			],
+			[
+				"sep",
+				"/C/Users/Misha/Documents/GitHub/Jester/Spec/Spec.ps1"
+			],
+			[
+				"inv",
+				"/C/Users/Misha/Documents/GitHub/Jester/InvokeTests.psm1"
+			],
+			[
+				"mo",
+				"/C/Users/Misha/Documents/GitHub/Jester/Model.psm1"
+			],
+			[
+				"core",
+				"/C/Users/Misha/Documents/GitHub/Jester/Core.psm1"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Users/Misha/Documents/GitHub/Jester/Jester.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true
+}
