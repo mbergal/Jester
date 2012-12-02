@@ -5,6 +5,7 @@ Import-Module (Resolve-RelativePath Model.psm1)
 $script:testsRun = 0;
 $script:testsFailed = 0;
 $script:outputAtTestStart = @();
+$script:transcriptFile = [System.IO.Path]::GetTempFileName()
 
 function Start-Progress( [Parameter(Mandatory=$true)] $This )
     {
@@ -26,9 +27,9 @@ function New-ConsoleAnnouncer()
     return New-Object PSObject -Property @{
         StartProgress = `
             {
-            $script:testsRun = 0;
-            $script:testsFailed = 0;
-            $script:testsSucceeded = 0;
+            $script:testsRun = 0
+            $script:testsFailed = 0
+            $script:testsSucceeded = 0
             }
         StopProgress = `
             {
@@ -44,22 +45,26 @@ function New-ConsoleAnnouncer()
                     {
                     "success" 
                         {
-                        $t = Get-Content "t"
+                        $t = Get-Content $script:transcriptFile
                         Stop-Transcript | Out-Null
                         if ( $null -eq (Compare-Object $script:outputAtTestStart $t ) )
                             {
-                            [console]::SetCursorPosition( 0, [console]::CursorTop - 1 );
+                            try {
+                                [console]::SetCursorPosition( 0, [console]::CursorTop - 1 );    
+                                } catch {}
                             }
                         $script:testsSucceeded += 1; 
                         Write-TestLine -Test $test -Color Green
                         }
                     "failure" 
                         { 
-                        $t = Get-Content "t"
+                        $t = Get-Content $script:transcriptFile
                         Stop-Transcript | Out-Null
                         if ( $null -eq (Compare-Object $script:outputAtTestStart $t ) )
                             {
-                            [console]::SetCursorPosition( 0, [console]::CursorTop - 1 );
+                            try {
+                                [console]::SetCursorPosition( 0, [console]::CursorTop - 1 );    
+                                } catch {}
                             }
                         
                         $script:testsFailed += 1; 
@@ -70,12 +75,11 @@ function New-ConsoleAnnouncer()
                         $color = 'White'
                         $script:testsRun += 1    
                         Write-TestLine -Test $test -Color White
-                        Start-Transcript "t" | Out-Null
-                        $script:outputAtTestStart = Get-Content "t";                        
+                        Start-Transcript $script:transcriptFile | Out-Null
+                        $script:outputAtTestStart = Get-Content $script:transcriptFile
                         }
                     default { throw "Unknown test result `"$result`"" }
                     }
-
                 }
             else 
                 {
