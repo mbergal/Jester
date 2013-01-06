@@ -1,8 +1,16 @@
 $ErrorActionPreference = "Stop"
-
-function Invoke-InSandbox( $context, $befores, $afters, $it )
+Import-Module (Resolve-RelativePath Announcers.psm1)
+   
+function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
+                           [Parameter(Mandatory=$true)]  $Announcer )
     {
-    $Context = $context
+    $befores    = $RunPlan.Befores 
+    $afters     = $RunPlan.Afters
+    $Context    = $RunPlan.context
+    $body       = $RunPlan.Body
+    $children   = $RunPlan.Children
+    $test       = $RunPlan.Test
+    
     try {
         if ( $befores -ne $null )
                 {
@@ -19,16 +27,28 @@ function Invoke-InSandbox( $context, $befores, $afters, $it )
         return "failure"
         }
 
-    try {
-        . $MyInvocation.MyCommand.Module $it   | Out-Null
-        }
-    catch [System.Exception]
+    if ( $body )
         {
-        Write-Host -Foreground Red $_.Exception.Message
-        Write-Host -Foreground Red $_.InvocationInfo.PositionMessage.TrimStart( "`n`r")
-        return "failure" 
+        Show-Progress $Announcer -Test $test 
+
+        try {
+            . $MyInvocation.MyCommand.Module $body   | Out-Null 
+            }
+        catch [System.Exception]
+            {
+            Write-Host -Foreground Red $_.Exception.Message
+            Write-Host -Foreground Red $_.InvocationInfo.PositionMessage.TrimStart( "`n`r")
+            Show-Progress $Announcer -Test $test -Result "failure"
+            }
+        Show-Progress $Announcer -Test $test -Result "success"
         }
-    
+
+
+
+    foreach ( $child in $children )
+        {
+        Invoke-InSandbox -RunPlan $child -Announcer $Announcer
+        }
 
     try {
         if ( $afters -ne $null )
@@ -44,9 +64,6 @@ function Invoke-InSandbox( $context, $befores, $afters, $it )
         Write-Host -Foreground Red $_.Exception.Message
         Write-Host -Foreground Red $_.InvocationInfo.PositionMessage.TrimStart( "`n`r")
         }
-
-
-    return "success"
     }
 
 Export-ModuleMember Invoke-InSandbox

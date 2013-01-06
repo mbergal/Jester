@@ -6,7 +6,7 @@
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version 2.0
 
-function Resolve-RelativePath( $path, $invocation )
+function global:Resolve-RelativePath( $path, $invocation )
     {
     $driveName = ''
     if ( -not $ExecutionContext.SessionState.Path.IsPSAbsolute( $path, [ref]$driveName  ) -and -not $path.StartsWith( "\\" ) ) # special case for UNC paths
@@ -33,6 +33,33 @@ function Resolve-RelativePath( $path, $invocation )
     else
         {
         return  $path       
+        }
+    }
+
+
+function Get-InvocationLocation( $invocation )
+    {
+    if ( $invocation -eq $null )  {
+        $invocation = @(Get-PSCallStack)[1].InvocationInfo
+        }
+    
+    if ( $invocation.MyCommand.Module -ne $null ) {
+        return $invocation.MyCommand.Module.Path
+        }
+    elseif ( $invocation.MyCommand.ScriptBlock -ne $null ) {
+		if ( $invocation.MyCommand.ScriptBlock.File -ne $null ) {
+        	return $invocation.MyCommand.ScriptBlock.File
+			}
+		else {
+			return (Get-Location).Path
+			}
+        }
+    elseif ( $invocation.ScriptName -ne $null ) {
+        return $invocation.ScriptName
+        }
+    else
+        {
+        return $invocation.MyCommand.Definition
         }
     }
 
@@ -70,7 +97,7 @@ function Invoke-Jester
             }
         else
             {
-            Invoke-Tests `
+            Invoke-Tests  `
                 -Test $Test `
                 -NoExecute:$NoExecute `
                 -Announcer $announcer

@@ -36,9 +36,16 @@ function It( [Parameter(Mandatory=$true)][string]      $Name,
                                         -Source     @( Get-PSCallStack )[1].ScriptName)
     }
 
-function Before( [scriptblock] $Block )
+function Before( [scriptblock] $Block, [switch]$All = $false )
     {
-    (Get-CurrentSuite).Befores += $Block
+    if ( $All ) 
+        {
+        (Get-CurrentSuite).BeforeAlls += $Block
+        }
+    else 
+        {
+        (Get-CurrentSuite).Befores += $Block    
+        }
     }
 
 function After( [scriptblock] $Block )

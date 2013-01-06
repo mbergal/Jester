@@ -14,6 +14,7 @@ function New-Suite( [string]        $Id,
                                             Children   = @() 
                                             Afters     = @()
                                             Befores    = @() 
+                                            BeforeAlls = @() 
                                             IsTest     = $false
                                             IsSuite    = $true
                                             }

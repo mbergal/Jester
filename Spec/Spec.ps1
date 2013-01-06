@@ -81,14 +81,22 @@ Describe "Jester" {
         
 
     Describe "Test Fixtures" {
-        Describe "Before" `
+        Describe "Before -All" `
             {
-            Describe "When before is specified" {
+            Describe "When before -all is specified" {
+                It "it is executed before first test in suite" {
+                    Invoke-Test '.\test-specs\before-all.ps1' -Expected  @( "Before", "It" )
+                    }
+                }
+            }
+        Describe "Before -Each" `
+            {
+            Describe "When before-each is specified" {
                 It "it is executed before test" {
                     Invoke-Test '.\test-specs\before.ps1' -Expected  @( "Before", "It" )
                     }
                 }
-            Describe "When before is specified in multiple nested suites" -Id "mbe" {
+            Describe "When before-each is specified in multiple nested suites" -Id "mbe" {
                 It "It is executed before test" {
                     Invoke-Test '.\test-specs\multiple_befores.ps1' -Expected  @( "Outer Before", "Inner Before", "It" )
                     }
@@ -106,7 +114,7 @@ Describe "Jester" {
                 }
             }
 
-        Describe "After" `
+        Describe "After -Each" `
             {
             Describe "When after is specified" {
                 It "it is executed after test" {
@@ -119,7 +127,10 @@ Describe "Jester" {
                     }
                 }
             Describe "When after fails" {
-                It "it is executed before test" {
+                It "The consequtive aftes are not executed" {
+                    throw "Not implemented"
+                    }
+                It "Test fails" {
                     throw "Not implemented"
                     }
                 }
