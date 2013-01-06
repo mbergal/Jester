@@ -80,32 +80,39 @@ function Invoke-Jester
            [Parameter(ParameterSetName="Test")][switch] $NoExecute = $false,
            [Parameter(ParameterSetName="Test")][switch] $NoOutline = $false )
 
-    if ( $NoOutline )
-        {
-        $announcer = New-NullAnnouncer
-        }
-    else
-        {
-        $announcer = New-ConsoleAnnouncer
-        }
-
-    if ( (Get-RootSuite).Children.Length -gt 0 )
-        {
-        if ( $Show ) 
+    try {
+        if ( $NoOutline )
             {
-            Show-Tests
+            $announcer = New-NullAnnouncer
             }
         else
             {
-            Invoke-Tests  `
-                -Test $Test `
-                -NoExecute:$NoExecute `
-                -Announcer $announcer
+            $announcer = New-ConsoleAnnouncer
+            }
+
+        if ( (Get-RootSuite).Children.Length -gt 0 )
+            {
+            if ( $Show ) 
+                {
+                Show-Tests
+                }
+            else
+                {
+                Invoke-Tests  `
+                    -Test $Test `
+                    -NoExecute:$NoExecute `
+                    -Announcer $announcer
+                }
+            }
+        else
+            {
+            throw "No suites defined"
             }
         }
-    else
+    catch
         {
-        throw "No suites defined"
+        $_.Exception.Message
+        $_.ScriptStackTrace    
         }
     }
 

@@ -46,8 +46,8 @@ function Show-RunPlan( $RunPlan, [string]$Indent = "" )
     }
 
 function New-SuiteRunPlan(  [object]    $Suite = $null,     
-                       [string]    $Test,
-                       [object]    $Announcer )
+                            [string]    $Test,
+                            [object]    $Announcer )
     {
     $runPlan = New-Object -Type PSObject -Property @{ 
         Suite   = $Suite
