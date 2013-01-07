@@ -78,17 +78,22 @@ function Invoke-Jester
     param( [Parameter(ParameterSetName="Show")][switch] $Show, 
            [Parameter(ParameterSetName="Test")][string] $Test = "*",
            [Parameter(ParameterSetName="Test")][switch] $NoExecute = $false,
-           [Parameter(ParameterSetName="Test")][switch] $NoOutline = $false )
+           [Parameter(ParameterSetName="Test")][switch] $NoOutline = $false,
+           [Parameter(ParameterSetName="Test")][switch] $PlainOutput = $false )
 
     try {
         if ( $NoOutline )
             {
             $announcer = New-NullAnnouncer
             }
-        else
+        else if ( $PlainOutput )
+            {
+            $announcer = New-PlainAnnouncer
+            }
+        else 
             {
             $announcer = New-ConsoleAnnouncer
-            }
+            }   
 
         if ( (Get-RootSuite).Children.Length -gt 0 )
             {

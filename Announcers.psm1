@@ -113,3 +113,51 @@ function New-NullAnnouncer()
             }
         }
     }
+
+
+
+function New-PlainAnnouncer()
+    {
+    return New-Object PSObject -Property @{
+        StartProgress = `
+            {
+            $script:testsRun = 0
+            $script:testsFailed = 0
+            $script:testsSucceeded = 0
+            }
+        StopProgress = `
+            {
+            Write-Host
+            Write-Host "Ran $script:testsRun tests ( $script:testsFailed failed, $script:testsSucceeded succeeded )"
+            }
+        ShowProgress = `
+            {
+            param( $test, [string] $result );
+            if ( $test.IsTest )
+                {
+                switch( $result )
+                    {
+                    "success" 
+                        {
+                        $script:testsSucceeded += 1; 
+                        }
+                    "failure" 
+                        { 
+                        $script:testsFailed += 1; 
+                        Write-Host "    Failure!"
+                        } 
+                    ""
+                        {
+                        $script:testsRun += 1    
+                        Write-TestLine -Test $test -Color White
+                        }
+                    default { throw "Unknown test result `"$result`"" }
+                    }
+                }
+            else 
+                {
+                Write-TestLine -Test $test -Color Yellow
+                }
+            }
+        }
+    }
