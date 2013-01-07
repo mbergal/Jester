@@ -46,7 +46,7 @@ function New-ConsoleAnnouncer()
                     "success" 
                         {
                         $t = Get-Content $script:transcriptFile
-                        Stop-Transcript | Out-Null
+                        try { Stop-Transcript | Out-Null } catch {}
                         if ( $null -eq (Compare-Object $script:outputAtTestStart $t ) )
                             {
                             try {
@@ -59,7 +59,7 @@ function New-ConsoleAnnouncer()
                     "failure" 
                         { 
                         $t = Get-Content $script:transcriptFile
-                        Stop-Transcript | Out-Null
+                        try { Stop-Transcript | Out-Null } catch {}
                         if ( $null -eq (Compare-Object $script:outputAtTestStart $t ) )
                             {
                             try {

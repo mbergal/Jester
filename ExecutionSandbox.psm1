@@ -33,6 +33,7 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
 
         try {
             . $MyInvocation.MyCommand.Module $body   | Out-Null 
+            Show-Progress $Announcer -Test $test -Result "success"
             }
         catch [System.Exception]
             {
@@ -40,7 +41,6 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
             Write-Host -Foreground Red $_.InvocationInfo.PositionMessage.TrimStart( "`n`r")
             Show-Progress $Announcer -Test $test -Result "failure"
             }
-        Show-Progress $Announcer -Test $test -Result "success"
         }
 
 
