@@ -157,6 +157,10 @@ Describe "Jester" {
                 {
                 Invoke-Test '.\test-specs\failed_test.ps1' | ShouldContain "Ran 1 tests ( 1 failed, 0 succeeded )"
                 }
+
+            It "Should exit with non-zero exit code" `
+                {
+                }
             }
         }
 
