@@ -11,24 +11,6 @@ function Invoke-Tests(  [string]                        $Test,
                         [Parameter(Mandatory=$true)]    $Announcer
                          )
     {
-
-    function Invoke-Suite( [Parameter(Mandatory=$true)]     $suite, 
-                           [Parameter(Mandatory=$true)]     $test, 
-                           [Parameter(Mandatory=$true)]     $NoExecute,
-                           [Parameter(Mandatory=$true)]     $Announcer )
-        {
-        Show-Progress $Announcer $Suite
-        if ( $suite.BeforeAlls -ne $null )
-                {
-                foreach( $before in $suite.BeforeAlls ) 
-                    {
-                    . $MyInvocation.MyCommand.Module $before  | Out-Null
-                    }
-                }
-
-        Invoke-Tests  $suite -Test $Test -NoExecute:$NoExecute -Announcer $Announcer
-        }
-
     $runPlan = New-SuiteRunPlan -Suite (Get-RootSuite) -Test $Test
     # Show-RunPlan -RunPlan $runPlan
     Start-Progress $Announcer
@@ -46,8 +28,7 @@ function Show-RunPlan( $RunPlan, [string]$Indent = "" )
     }
 
 function New-SuiteRunPlan(  [object]    $Suite = $null,     
-                            [string]    $Test,
-                            [object]    $Announcer )
+                            [string]    $Test )
     {
     $runPlan = New-Object -Type PSObject -Property @{ 
         Suite   = $Suite
@@ -71,7 +52,7 @@ function New-SuiteRunPlan(  [object]    $Suite = $null,
             }
         elseif ( $testOrSuite.IsSuite -and ( SuiteChildrenMatch -Suite $testOrSuite -Match $Test ) )
             {
-            Invoke-Suite -Suite $testOrSuite  -Test $Test -NoExecute:$NoExecute -Announcer $Announcer
+            $runPlan.Children += New-SuiteRunPlan -Suite $testOrSuite -Test $Test
             }
         }
     return $runPlan
