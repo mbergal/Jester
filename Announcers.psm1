@@ -161,7 +161,7 @@ function New-PlainAnnouncer()
                 {
                 if ( $test.Parent -ne $null )
                     {
-                    Write-TestLine -Test $test
+                    Write-TestLine -Test $test -Color White
                     }
                 }
             }
