@@ -10,6 +10,7 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
     $body       = $RunPlan.Body
     $children   = $RunPlan.Children
     $test       = $RunPlan.Test
+    $suite      = $RunPlan.Suite
     
     try {
         if ( $befores -ne $null )
@@ -27,7 +28,7 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
         return "failure"
         }
 
-    if ( $body )
+    if ( $test -ne $null )
         {
         Show-Progress $Announcer -Test $test 
 
@@ -42,7 +43,10 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
             Show-Progress $Announcer -Test $test -Result "failure"
             }
         }
-
+    elseif ( $suite -ne $null )
+        {
+        Show-Progress $Announcer -Test $suite
+        }
 
 
     foreach ( $child in $children )

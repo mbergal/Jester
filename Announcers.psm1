@@ -83,7 +83,10 @@ function New-ConsoleAnnouncer()
                 }
             else 
                 {
-                Write-TestLine -Test $test -Color Yellow
+                if ( $test.Parent -ne $null )
+                    {
+                    Write-TestLine -Test $test -Color Yellow
+                    }
                 }
             }
         }
@@ -156,7 +159,10 @@ function New-PlainAnnouncer()
                 }
             else 
                 {
-                Write-TestLine -Test $test -Color Yellow
+                if ( $test.Parent -ne $null )
+                    {
+                    Write-TestLine -Test $test
+                    }
                 }
             }
         }
