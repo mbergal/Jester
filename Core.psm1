@@ -86,7 +86,7 @@ function Invoke-Jester
             {
             $announcer = New-NullAnnouncer
             }
-        else if ( $PlainOutput )
+        elseif ( $PlainOutput )
             {
             $announcer = New-PlainAnnouncer
             }
