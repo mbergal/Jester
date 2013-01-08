@@ -113,14 +113,5 @@ function SuiteChildrenMatch( $Suite, [string] $Match )
     return $false
     }
 
-function Invoke-Test( [Parameter(Mandatory=$true)]   $Test,
-                      [Parameter(Mandatory=$true)]   $Announcer )
-    {
-    ( $context, $befores, $afters, $it ) = Prepare-Test $Test
-
-    Show-Progress $Announcer -Test $test 
-    $result = Invoke-InSandbox $context $befores $afters $it
-    Show-Progress $Announcer -Test $test -Result $result
-    }
 
 Export-ModuleMember Invoke-Tests

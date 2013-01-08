@@ -11,6 +11,7 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
     $children   = $RunPlan.Children
     $test       = $RunPlan.Test
     $suite      = $RunPlan.Suite
+    $successful = $true
     
     try {
         if ( $befores -ne $null )
@@ -40,6 +41,7 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
             {
             Write-Host -Foreground Red $_.Exception.Message
             Write-Host -Foreground Red $_.InvocationInfo.PositionMessage.TrimStart( "`n`r")
+            $successful = $false
             Show-Progress $Announcer -Test $test -Result "failure"
             }
         }
@@ -51,7 +53,7 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
 
     foreach ( $child in $children )
         {
-        Invoke-InSandbox -RunPlan $child -Announcer $Announcer
+        $successful =  ( Invoke-InSandbox -RunPlan $child -Announcer $Announcer ) -and $successful
         }
 
     try {
@@ -68,6 +70,8 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
         Write-Host -Foreground Red $_.Exception.Message
         Write-Host -Foreground Red $_.InvocationInfo.PositionMessage.TrimStart( "`n`r")
         }
+
+    return $successful
     }
 
 Export-ModuleMember Invoke-InSandbox

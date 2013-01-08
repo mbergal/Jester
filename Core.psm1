@@ -103,10 +103,11 @@ function Invoke-Jester
                 }
             else
                 {
-                Invoke-Tests  `
+                return Invoke-Tests  `
                     -Test $Test `
                     -NoExecute:$NoExecute `
                     -Announcer $announcer
+             
                 }
             }
         else
@@ -118,7 +119,9 @@ function Invoke-Jester
         {
         $_.Exception.Message
         $_.ScriptStackTrace    
+        return $false;
         }
+    
     }
 
 function Show-Tests
