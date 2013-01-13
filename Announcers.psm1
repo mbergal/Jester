@@ -45,8 +45,14 @@ function New-ConsoleAnnouncer()
                     {
                     "success" 
                         {
-                        $t = Get-Content $script:transcriptFile
-                        try { Stop-Transcript | Out-Null } catch {}
+                        try { 
+                            $t = Get-Content $script:transcriptFile; Stop-Transcript | Out-Null 
+                            }
+                        catch 
+                            {
+                            $t = @()
+                            }
+
                         if ( $null -eq (Compare-Object $script:outputAtTestStart $t ) )
                             {
                             try {
@@ -58,8 +64,14 @@ function New-ConsoleAnnouncer()
                         }
                     "failure" 
                         { 
-                        $t = Get-Content $script:transcriptFile
-                        try { Stop-Transcript | Out-Null } catch {}
+                        try { 
+                            $t = Get-Content $script:transcriptFile; Stop-Transcript | Out-Null 
+                            } 
+                        catch 
+                            { 
+                            $t = @()
+                            }
+                            
                         if ( $null -eq (Compare-Object $script:outputAtTestStart $t ) )
                             {
                             try {
@@ -75,8 +87,12 @@ function New-ConsoleAnnouncer()
                         $color = 'White'
                         $script:testsRun += 1    
                         Write-TestLine -Test $test -Color White
-                        Start-Transcript $script:transcriptFile | Out-Null
-                        $script:outputAtTestStart = Get-Content $script:transcriptFile
+                        $script:outputAtTestStart = @()
+                        try { 
+                            Start-Transcript $script:transcriptFile | Out-Null 
+                            $script:outputAtTestStart = Get-Content $script:transcriptFile 
+                            } 
+                        catch {}
                         }
                     default { throw "Unknown test result `"$result`"" }
                     }
