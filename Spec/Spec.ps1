@@ -85,10 +85,11 @@ Describe "Jester" {
             {
             Describe "When before -all is specified" {
                 It "it is executed before first test in suite" {
-                    Invoke-Test '.\test-specs\before-all.ps1' -Expected  @( "Before", "It" )
+                    Invoke-Test '.\test-specs\before-all.ps1' -Expected  @( "Before -All Outer", "Before -All Inner", "It 1", "It 2" )
                     }
                 }
             }
+
         Describe "Before -Each" `
             {
             Describe "When before-each is specified" {

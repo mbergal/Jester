@@ -14,7 +14,7 @@ function Invoke-Tests(  [string]                        $Test,
     $runPlan = New-SuiteRunPlan -Suite (Get-RootSuite) -Test $Test
     # Show-RunPlan -RunPlan $runPlan
     Start-Progress $Announcer
-    Invoke-InSandbox -RunPlan $runPlan -Announcer $Announcer
+    $successful = Invoke-InSandbox -RunPlan $runPlan -Announcer $Announcer 
     Stop-Progress $Announcer
     }
 

@@ -26,4 +26,4 @@ Describe "Outer" `
         }
     }
     
-Invoke-Jester -Test * # -NoOutline
+Invoke-Jester -Test * -NoOutline
