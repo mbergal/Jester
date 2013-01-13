@@ -24,13 +24,45 @@ function ShouldBe( [Parameter(ValueFromPipeline=$true)] $actual, [Parameter(Posi
         {}
     elseif ( $actual -ne $null -or $expected -ne $null ) 
         {
-        throw New-Object JesterFailure( $expected, $actual, "" );
+        throw New-Object JesterFailure( 
+            (Convert-ToStringRepresenation $expected), 
+            (Convert-ToStringRepresenation $actual), 
+            "" );
         }
     else 
         {
         $diff = Compare-Object $actual $expected
-        if ( $diff ) 
-            { throw New-Object JesterFailure( $expected, $actual, ( $diff | Out-String )) }
+        if ( $diff )
+            { 
+            throw New-Object JesterFailure( 
+                (Convert-ToStringRepresenation $expected), 
+                (Convert-ToStringRepresenation  $actual), 
+                ( $diff | Out-String ) ) 
+            }
+        }
+    }
+
+function Convert-ToStringRepresenation( $object )
+    {
+    if ( $object -is "Object[]" )
+        {
+        "@( "
+        $first = $true
+        foreach( $item in $object )
+            {
+            if ( -not $first ) { ", " }
+            Convert-ToStringRepresenation $item  
+            $first = $false
+            }
+        ")"
+        }
+    elseif ( $object -is "string" )
+        {
+        "'" + $object + "'"
+        }
+    else 
+        {
+        $object;
         }
     }
 
