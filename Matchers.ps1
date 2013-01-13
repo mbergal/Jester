@@ -22,7 +22,7 @@ function ShouldBe( [Parameter(ValueFromPipeline=$true)] $actual, [Parameter(Posi
     {
     if ( $actual -eq $null -and $expected -eq $null )
         {}
-    elseif ( $actual -ne $null -or $expected -ne $null ) 
+    elseif ( $actual -eq $null -or $expected -eq $null ) 
         {
         throw New-Object JesterFailure( 
             (Convert-ToStringRepresenation $expected), 
