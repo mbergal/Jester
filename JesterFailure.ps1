@@ -14,7 +14,7 @@ public class JesterFailure
 
     public override string ToString()
         {
-        return string.Format("Expected: {0}.\nBut was:  {1}\n{2}", Expected, Actual, Difference );
+        return string.Format("Expected: {0}\nBut was:  {1}\n{2}", Expected, Actual, Difference );
         }
     }
 '@
