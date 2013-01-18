@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Jester</id>
+    <version>1.0.0</version>
+    <authors>Misha Bergal</authors>
+    <owners>Misha Bergal</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>https://github.com/mbergal/Jester</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>Powershell BDD</tags>
+  </metadata>
+    <files>
+        <file src="src\**\*.*" target="" /> 
+    </files>
+</package>
