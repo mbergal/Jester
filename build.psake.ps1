@@ -19,6 +19,11 @@ Task Make-Nuget `
     NugetPack -NuSpec $rootDir\Jester.nuspec -OutputDirectory $buildDir
     }
 
+Task Test `
+    {
+    powershell ".\Spec\Spec.ps1;if ( -not ( Invoke-Jester ) ) { exit 1 };"
+    }
+
 function CleanDir( [Parameter(Mandatory=$true)][string]  $Directory )
     {
     if ( Test-Path $Directory  ) {
