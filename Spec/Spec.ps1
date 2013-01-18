@@ -178,6 +178,14 @@ Describe "Jester" {
                 ShouldThrow { $null | ShouldBe 1 }
                 ShouldThrow { 1 | ShouldBe $null }
                 }
+            It "Should not match different objects" `
+                {
+                ShouldThrow { 2 | ShouldBe 1 }
+                }
+            It "Should match same objects" `
+                {
+                2 | ShouldBe 1
+                }
             }
 
         Describe "ShouldContain" `
