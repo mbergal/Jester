@@ -124,7 +124,7 @@ Describe "Jester" {
                 }
             Describe "When after is specified in multiple nested suites" {
                 It "it is executed in the sequence from inner suite to outer suite" {
-                    throw "Not implemented"
+                    Invoke-Test '.\test-specs\multiple_afters.ps1' -Expected  @( "It", "Inner After", "Outer After" )
                     }
                 }
             Describe "When after fails" {
@@ -184,7 +184,7 @@ Describe "Jester" {
                 }
             It "Should match same objects" `
                 {
-                2 | ShouldBe 1
+                2 | ShouldBe 2
                 }
             }
 
