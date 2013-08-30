@@ -78,6 +78,11 @@ function Get-ChildIndex( $child )
     return [array]::IndexOf( $child.Parent.Children, $child ) + 1
     }
 
+function Set-RootSuite( $suite )
+    {
+    $script:rootSuite = $suite;
+    }
+
 function Get-RootSuite()
     {
     return $script:rootSuite;
@@ -155,6 +160,7 @@ Export-ModuleMember New-Suite
 Export-ModuleMember Add-Suite
 Export-ModuleMember New-Test
 Export-ModuleMember Add-Test
+Export-ModuleMember Set-RootSuite
 Export-ModuleMember Get-RootSuite
 Export-ModuleMember Get-Level
 Export-ModuleMember Get-SuiteChain

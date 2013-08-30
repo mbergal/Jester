@@ -47,12 +47,12 @@ function Get-InvocationLocation( $invocation )
         return $invocation.MyCommand.Module.Path
         }
     elseif ( $invocation.MyCommand.ScriptBlock -ne $null ) {
-		if ( $invocation.MyCommand.ScriptBlock.File -ne $null ) {
-        	return $invocation.MyCommand.ScriptBlock.File
-			}
-		else {
-			return (Get-Location).Path
-			}
+        if ( $invocation.MyCommand.ScriptBlock.File -ne $null ) {
+            return $invocation.MyCommand.ScriptBlock.File
+            }
+        else {
+            return (Get-Location).Path
+            }
         }
     elseif ( $invocation.ScriptName -ne $null ) {
         return $invocation.ScriptName
@@ -71,6 +71,12 @@ Import-Module (Resolve-RelativePath Model.psm1)
 . (Resolve-RelativePath Matchers.ps1)
 . (Resolve-RelativePath JesterFailure.ps1)
 
+
+function Reset-Jester
+    {
+    Set-RootSuite (New-Suite)
+    Set-CurrentSuite (Get-RootSuite)
+    }
 
 function Invoke-Jester
     {
@@ -132,6 +138,7 @@ function Show-Tests
 
 Export-ModuleMember After
 Export-ModuleMember Before
+Export-ModuleMember Reset-Jester
 Export-ModuleMember Invoke-Jester
 Export-ModuleMember Describe
 Export-ModuleMember It
