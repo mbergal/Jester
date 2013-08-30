@@ -16,7 +16,7 @@ function Describe( [Parameter(Mandatory=$true)][string]     $Name,
 
     Set-CurrentSuite $newSuite
 
-    Add-Suite  $parentSuite $script:currentSuite
+    Add-Suite  $parentSuite (Get-CurrentSuite)
 
     . $Block;
 
@@ -52,18 +52,6 @@ function After( [scriptblock] $Block )
     {
     (Get-CurrentSuite).Afters += $Block
     }
-
-function Set-CurrentSuite( $suite )
-    {
-    $script:currentSuite = $suite;
-    }
-
-function Get-CurrentSuite()
-    {
-    return $script:currentSuite;
-    }
-
-$script:currentSuite = Get-RootSuite
 
 Export-ModuleMember Describe
 Export-ModuleMember Before
