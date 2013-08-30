@@ -1,6 +1,5 @@
 $ErrorActionPreference="Stop"
-Import-Module (Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) ..\..\Jester.psd1 ) -Force
-
+Import-Module (Join-Path (Split-Path -Parent $PSCommandPath) ..\..\src\Jester.psd1 ) -Force
 
 Describe "Something" `
     {

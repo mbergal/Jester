@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-Import-Module (Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) ..\Jester.psd1 )
+Import-Module (Join-Path (Split-Path -Parent $PSCommandPath) ..\src\Jester.psd1 )
 
 Describe "Jester" {
     Before {
@@ -15,7 +15,7 @@ Describe "Jester" {
 
         function Invoke-Test( $path, [object] $Expected = $null, [string[]] $Contains = $null, [object] $NotContains = $null )
             {
-            $result =  & powershell.exe $path
+            $result =  & powershell.exe (Join-Path (Split-Path -Parent $PSCommandPath) $path)
             if ( $Expected -ne $null )
                 {
                 (,$result) | ShouldBe $Expected    
