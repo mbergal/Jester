@@ -154,7 +154,18 @@ function Select-TestStructure( [parameter(ValueFromPipeline=$true)]$test )
 
     }
 
-$script:rootSuite = New-Suite 
+function Set-CurrentSuite( $suite )
+    {
+    $script:currentSuite = $suite;
+    }
+
+function Get-CurrentSuite()
+    {
+    return $script:currentSuite;
+    }
+
+Set-RootSuite (New-Suite)
+$script:currentSuite = Get-RootSuite
 
 Export-ModuleMember New-Suite
 Export-ModuleMember Add-Suite
@@ -165,3 +176,5 @@ Export-ModuleMember Get-RootSuite
 Export-ModuleMember Get-Level
 Export-ModuleMember Get-SuiteChain
 Export-ModuleMember Get-SuiteStructure
+Export-ModuleMember Set-CurrentSuite
+Export-ModuleMember Get-CurrentSuite

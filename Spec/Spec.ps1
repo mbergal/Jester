@@ -2,6 +2,7 @@ $ErrorActionPreference = "Stop"
 
 Import-Module (Join-Path (Split-Path -Parent $PSCommandPath) ..\src\Jester.psd1 )
 
+try {
 Describe "Jester" {
     Before {
         function ShouldContainLine(  [Parameter(ValueFromPipeline=$true)][string[]] $actual, [Parameter(Mandatory=$true)]$line )
@@ -230,3 +231,8 @@ Describe "Jester" {
             }
         }
 }
+} catch
+    {
+        $_.Exception.Message
+        $_.ScriptStackTrace    
+    }
