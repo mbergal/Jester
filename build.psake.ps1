@@ -49,12 +49,13 @@ function CleanDir( [Parameter(Mandatory=$true)][string]  $Directory )
     mkdir $Directory | Out-Null
     }
 
-Task Release `
+Task Release -depends  Make-Nuget `
     {
     Assert ($apiKey -ne $null) "apiKey should not be null"
     Assert ($nugetServer -ne $null) "nugetServer should not be null"
 
-    # . ($PSCommandPath "Nuget") $nupkg  push -s $nugetServer $apiKey
+    $nupkg = ls ( $buildDir + "\Jester.*.nupkg" )
+    . $nugetExe push $nupkg -s $nugetServer $apiKey
     }
 
 function NugetPack( [Parameter(Mandatory=$true)][string] $NuSpec,
