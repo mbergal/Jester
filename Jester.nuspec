@@ -15,6 +15,6 @@
     <tags>Powershell BDD</tags>
   </metadata>
     <files>
-        <file src="src\**\*.*" target="" /> 
+        <file src="..\src\**\*.*" target="" /> 
     </files>
 </package>
