@@ -1,6 +1,7 @@
 $ErrorActionPreference = "Stop"
 Import-Module (Resolve-RelativePath Announcers.psm1)
-   
+Import-Module (Resolve-RelativePath Mock.psm1)
+
 function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
                            [Parameter(Mandatory=$true)]  $Announcer )
     {
@@ -12,6 +13,13 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
     $test       = $RunPlan.Test
     $suite      = $RunPlan.Suite
     $successful = $true
+    $mocks = @{}
+
+    function Mock( [Parameter(Mandatory=$true)][string]       $CommandName,
+               [Parameter(Mandatory=$true)][scriptblock]  $Action )
+        {
+        $mocks[ $CommandName ] = $Action
+        }
     
     try {
         if ( $befores -ne $null )
@@ -19,6 +27,10 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
                 foreach( $before in $befores ) 
                     {
                     . $MyInvocation.MyCommand.Module $before  | Out-Null
+                    foreach ( $mock in $mocks.Keys  )
+                        {
+                        New-Item -Path function: -Name $mock -Value $mocks[$mock]
+                        }
                     }
                 }
         }
