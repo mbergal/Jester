@@ -28,7 +28,7 @@ function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
                     . $MyInvocation.MyCommand.Module $before  | Out-Null
                     foreach ( $mock in $mocks.Keys  )
                         {
-                        New-Item -Path function: -Name $mock -Value $mocks[$mock]
+                        Set-Item -Path function:global:$mock -Value $mocks[$mock]
                         }
                     }
                 }
