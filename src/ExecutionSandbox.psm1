@@ -1,6 +1,5 @@
 $ErrorActionPreference = "Stop"
 Import-Module (Resolve-RelativePath Announcers.psm1)
-Import-Module (Resolve-RelativePath Mock.psm1)
 
 function Invoke-InSandbox( [Parameter(Mandatory=$true)]  $RunPlan,
                            [Parameter(Mandatory=$true)]  $Announcer )
